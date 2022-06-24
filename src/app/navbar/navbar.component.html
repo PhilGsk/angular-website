@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container-xxl bd-gutter flex-wrap flex-lg-nowrap">
+    <a class="navbar-brand" href="#">
+      <img
+      src="https://kickerclubimages.s3.eu-central-1.amazonaws.com/assets/Kicker_Club_App_Icon_KC_only.webp"
+      height="20"
+      alt=""
+      loading="lazy"/>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="inlineNav.toggle()"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      id="navbarText"
+      mdbCollapse
+      #inlineNav="mdbCollapse"
+    >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Preise</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Über uns</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav d-flex flex-row">
+        <!-- Icons -->
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" href="https://www.instagram.com/kickerclub.io/" target="_blank">
+            <em class="fab fa-instagram fa-2x gr"></em>
+          </a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" href="https://www.facebook.com/kickerclub.io/" target="_blank">
+            <em class="fab fa-facebook fa-2x gr"></em>
+          </a>
+        </li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <button type="button" class="btn btn-light me-3" (click)="goToApp()">
+          Zur App
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
