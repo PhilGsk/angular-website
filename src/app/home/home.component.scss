@@ -1,11 +1,151 @@
-.text-center{
-  text-align: center!important;
-  margin: -0.5px !important;
+.ctn{
+  height: 100vh;
 }
 
-h1{
+.text-center {
+  text-align: center !important;
   padding-top: 5%;
 }
- img{
-   padding-top: 5%;
- }
+
+
+.device-wrapper {
+  max-width: 300px;
+  width: 100%;
+}
+.device {
+  position: relative;
+  background-size: cover;
+}
+
+.device::after {
+  position: absolute;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.device .screen {
+  position: absolute;
+  background-size: cover;
+  pointer-events: auto;
+}
+
+.device .button {
+  position: absolute;
+  cursor: pointer;
+}
+
+.device[data-device=iPhoneX][data-orientation=portrait][data-color=black] {
+  padding-bottom: 198.898071625%;
+}
+
+.device[data-device=iPhoneX][data-orientation=portrait][data-color=black] .screen {
+  top: 3.1855955679%;
+  left: 56.8170523416%;
+  width: 86.2258953168%;
+  height: 93.6288088643%;
+}
+
+.device[data-device=iPhoneX][data-orientation=portrait][data-color=black]::after {
+  content: "";
+  background-image: url("../../assets/portrait_black.png");
+}
+
+.device[data-device=iPhoneX][data-orientation=portrait][data-color=black] .button {
+  display: none;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-black {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+}
+
+@media (min-width: 1400px) {
+  .features-device-mockup .circle {
+    width: 80%;
+    left: 0;
+  }
+  .features-device-mockup .device-wrapper {
+    max-width: 17rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.app-badge {
+  height: 3rem;
+}
+
+$base: 0.6rem;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.chevron {
+  position: absolute;
+  width: $base * 3.5;
+  height: $base * 0.8;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #2c3e50;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skewY(30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skewY(-30deg);
+}
+
+@keyframes move-chevron {
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    transform: translateY($base * 3.8);
+  }
+  66.6% {
+    opacity: 1;
+    transform: translateY($base * 5.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY($base * 8) scale(0.5);
+  }
+}

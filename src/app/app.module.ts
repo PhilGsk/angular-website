@@ -23,6 +23,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { NumerCounterComponent } from './numer-counter/numer-counter.component';
 import { FeaturesComponent } from './features/features.component';
+import { PricingComponent } from './pricing/pricing.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FeaturesComponent } from './features/features.component';
     NavbarComponent,
     HomeComponent,
     NumerCounterComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    PricingComponent
   ],
   imports: [
     BrowserModule,
