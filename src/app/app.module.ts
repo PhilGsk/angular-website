@@ -24,6 +24,8 @@ import { HomeComponent } from './home/home.component';
 import { NumerCounterComponent } from './numer-counter/numer-counter.component';
 import { FeaturesComponent } from './features/features.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { BenefitsComponent } from './benefits/benefits.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { PricingComponent } from './pricing/pricing.component';
     HomeComponent,
     NumerCounterComponent,
     FeaturesComponent,
-    PricingComponent
+    PricingComponent,
+    BenefitsComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
